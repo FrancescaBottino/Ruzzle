@@ -1,0 +1,45 @@
+APPROCCIO 1:
+risolvere una matrice ruzzle: 
+	-capire se una parola fa parte della griglia (tramite il dizionario)
+	(data una parola valida cerco se è nella griglia)
+	-aggiungerla alla sol
+	
+INPUT: 
+-Stringa da riconoscere 'parola'
+-contenuto board
+-punto in cui iniziare (casella: lettera)
+
+
+SOL. PARZIALE: 
+	la parte iniziale della parola, quella che ho già riconsociuto
+	+tengo traccia dell'elenco delle posizioni in cui si trovano le lettere già riconosciute
+
+
+SOL. TOTALE:
+	parola completamente riconosciuta	
+	+tengo traccia dell'elenco delle posizioni in cui si trovano le lettere già riconosciute
+
+
+LIVELLO DELLA RICORSIONE:
+	numero di caratteri gia riconosciuti 
+	
+	
+CASI TERMINALI:	
+	livello=lunghezza parola da riconoscere (es. cerco pippo, arrivo a 5 ed esco)
+	se viene trovata la soluzione --> interrompo la ricerca subito (no backtracking)
+	
+
+Avvio della ricorsione:
+	livello=1 (non zero perchè la prima lettere l'abbiamo trovata manualmente)
+	parto da una posizione che contiene la prima lettera 
+	
+Strutture dati che ci servono:
+	Stringa da riconoscere
+	Livello 
+	Lista dove mettere le posizioni ('percorso') corrispondente alla sequenza di caselle
+	
+		
+	
+APPROCCIO 2:
+PROVO TUTTI I POSSIBILI PERCORSI SULLA GRIGLIA, parto da una cella e guardo se esiste una parola 
+con quelle iniziali e vado avanti 	

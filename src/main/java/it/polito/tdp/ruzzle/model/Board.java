@@ -15,7 +15,8 @@ import javafx.beans.property.StringProperty;
  */
 public class Board {
 	private List<Pos> positions;
-	private Map<Pos, StringProperty> cells;
+	//matrice
+	private Map<Pos, StringProperty> cells; //chiave: posizone, valore: string property (meglio delle stringhe)
 
 	private int size;
 
